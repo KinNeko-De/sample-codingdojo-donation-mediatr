@@ -1,0 +1,23 @@
+﻿@page "/"
+
+<div>
+@if(AlreadyDonated)
+{
+    <h1>Every little bit helps. Your generosity makes a difference.</h1>
+}
+else
+{
+    <h1>Together, we can make a change. Invest in a brighter future</h1>
+}
+
+
+<input type="text" @bind="MyDonation">
+<button @onclick="Donate">@DonateText</button>
+
+
+@if (AlreadyDonated)
+{
+<h2>Total Donation until now : @Total</h2>
+}
+
+</div>

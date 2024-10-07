@@ -13,6 +13,8 @@ public class Program
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents();
 
+        builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
+
         builder.Services.AddSingleton<Database>();
         builder.Services.AddTransient<Server>();
 
